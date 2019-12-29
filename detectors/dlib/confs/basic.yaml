@@ -1,0 +1,33 @@
+detector:
+  dlib:
+    scale: 1
+    score_th: 0.0
+    landmark_detector: dlib/shape_predictor_68_face_landmarks.dat
+  ssd_inception_v2:
+    score_th: 0.5
+    frozen_graph: ssd/graph_inception_v2_fddb.pb
+  ssd_mobilenet_v2:
+    score_th: 0.8 # TODO?
+    frozen_graph: ssd/graph_mobilenet_v2_all_180627.pb
+
+roi:
+  recognizer_vgg:
+    crop_y_ratio: 0.536
+    size_ratio: 1.457
+  recognizer_resnet:
+    crop_y_ratio: 0.5
+    size_ratio: 1.35
+
+recognizer:
+  topk: 5
+  vgg:
+    score_th: 0.78
+    db: db_blackpink.pkl
+    batch: 4
+  resnet:
+    score_th: 0.5
+    db: db_blackpink.pkl
+    batch: 4
+
+dataset:
+  lfw: /data/public/rw/datasets/faces/lfw
