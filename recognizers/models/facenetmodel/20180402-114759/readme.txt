@@ -1,0 +1,1 @@
+download the facenet pretrained model here, check https://github.com/davidsandberg/facenet

@@ -1,0 +1,1 @@
+download the arcface pretrained model here https://github.com/deepinsight/insightface
