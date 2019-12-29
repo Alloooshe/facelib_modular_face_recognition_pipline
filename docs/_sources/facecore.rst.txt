@@ -1,0 +1,7 @@
+facecore module
+===============
+
+.. automodule:: facecore
+   :members:
+   :undoc-members:
+   :show-inheritance:

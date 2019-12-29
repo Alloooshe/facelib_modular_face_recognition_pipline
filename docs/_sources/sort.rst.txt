@@ -1,0 +1,7 @@
+sort module
+===========
+
+.. automodule:: sort
+   :members:
+   :undoc-members:
+   :show-inheritance:

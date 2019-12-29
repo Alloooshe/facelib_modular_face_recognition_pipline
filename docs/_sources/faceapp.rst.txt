@@ -1,0 +1,7 @@
+faceapp module
+==============
+
+.. automodule:: faceapp
+   :members:
+   :undoc-members:
+   :show-inheritance:

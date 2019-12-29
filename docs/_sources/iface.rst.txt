@@ -1,0 +1,7 @@
+iface module
+============
+
+.. automodule:: iface
+   :members:
+   :undoc-members:
+   :show-inheritance:

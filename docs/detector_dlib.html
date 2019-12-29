@@ -1,0 +1,298 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>detector_dlib module &mdash; Face Lib 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Face Lib
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">detector_dlib module</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Face Lib</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>detector_dlib module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/detector_dlib.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-detector_dlib">
+<span id="detector-dlib-module"></span><h1>detector_dlib module<a class="headerlink" href="#module-detector_dlib" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="detector_dlib.FaceDetectorDlib">
+<em class="property">class </em><code class="sig-prename descclassname">detector_dlib.</code><code class="sig-name descname">FaceDetectorDlib</code><a class="headerlink" href="#detector_dlib.FaceDetectorDlib" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="detector_base.html#detector_base.FaceDetector" title="detector_base.FaceDetector"><code class="xref py py-class docutils literal notranslate"><span class="pre">detector_base.FaceDetector</span></code></a></p>
+<p>reference : <a class="reference external" href="https://www.pyimagesearch.com/2017/04/03/facial-landmarks-dlib-opencv-python/">https://www.pyimagesearch.com/2017/04/03/facial-landmarks-dlib-opencv-python/</a></p>
+<p>uses dlib library and feature based algorithm to get the bounding boxes and face feature points in an image</p>
+<dl class="attribute">
+<dt id="detector_dlib.FaceDetectorDlib.NAME">
+<code class="sig-name descname">NAME</code><em class="property"> = 'detector_dlib'</em><a class="headerlink" href="#detector_dlib.FaceDetectorDlib.NAME" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="detector_dlib.FaceDetectorDlib.clean">
+<code class="sig-name descname">clean</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#detector_dlib.FaceDetectorDlib.clean" title="Permalink to this definition">¶</a></dt>
+<dd><p>clean the loaded model</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="detector_dlib.FaceDetectorDlib.configure">
+<code class="sig-name descname">configure</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#detector_dlib.FaceDetectorDlib.configure" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="detector_dlib.FaceDetectorDlib.detect">
+<code class="sig-name descname">detect</code><span class="sig-paren">(</span><em class="sig-param">npimg</em>, <em class="sig-param">clean=False</em><span class="sig-paren">)</span><a class="headerlink" href="#detector_dlib.FaceDetectorDlib.detect" title="Permalink to this definition">¶</a></dt>
+<dd><p>perform dlib face detection in image</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>npimg</strong> (<em>numpy Array</em>) – the image to detect</p></li>
+<li><p><strong>clean</strong> (<em>boolean</em>) – flag to indicate if you wish to clean the loaded model and configuration or not</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Returns :</dt><dd><p>boxes (numpy array) : the bounding boxes of the faces in the image of shape (n,x,y,w,h,convidance)
+points (numpy array) : the coordinations of the face feature points of shape (n,2,68)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="detector_dlib.FaceDetectorDlib.detect_landmark">
+<code class="sig-name descname">detect_landmark</code><span class="sig-paren">(</span><em class="sig-param">npimg</em>, <em class="sig-param">det</em><span class="sig-paren">)</span><a class="headerlink" href="#detector_dlib.FaceDetectorDlib.detect_landmark" title="Permalink to this definition">¶</a></dt>
+<dd><p>get the face landmarks in an image</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>npimg</strong> (<em>numpy array</em>) – the target image</p></li>
+<li><p><strong>det</strong> (<em>dlib model</em>) – the dlib detector model  to use</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of coordinations for face landmarks</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>coords (list)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="detector_dlib.FaceDetectorDlib.load">
+<code class="sig-name descname">load</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#detector_dlib.FaceDetectorDlib.load" title="Permalink to this definition">¶</a></dt>
+<dd><p>load the dlib model to prepare for use</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>True if the model was loaded successfully and False elsewise</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="detector_dlib.FaceDetectorDlib.name">
+<code class="sig-name descname">name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#detector_dlib.FaceDetectorDlib.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns the name of the model</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="detector_dlib.FaceDetectorDlib.parse_output">
+<code class="sig-name descname">parse_output</code><span class="sig-paren">(</span><em class="sig-param">boxes</em>, <em class="sig-param">points</em><span class="sig-paren">)</span><a class="headerlink" href="#detector_dlib.FaceDetectorDlib.parse_output" title="Permalink to this definition">¶</a></dt>
+<dd><p>helper function to parse ouput of the detector to fit in the pipline</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>boxes</strong> (<em>numpy array</em>) – the faces bounding boxes of the image</p></li>
+<li><p><strong>points</strong> (<em>numpy array</em>) – the coordinations of the face feature points</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the faces bounding boxes of the image  in shape (n,x,y,w,h,confidance)
+points (numpy array) : the coordinations of the face feature points in shape (n,2,68)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>boxes (numpy array)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="detector_dlib.FaceDetectorDlib.predictor_path">
+<code class="sig-name descname">predictor_path</code><em class="property"> = None</em><a class="headerlink" href="#detector_dlib.FaceDetectorDlib.predictor_path" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Ali Mohammad
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,416 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>recognize_models module &mdash; Face Lib 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Face Lib
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">recognize_models module</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Face Lib</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>recognize_models module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/recognize_models.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-recognize_models">
+<span id="recognize-models-module"></span><h1>recognize_models module<a class="headerlink" href="#module-recognize_models" title="Permalink to this headline">¶</a></h1>
+<p>this file containes helper functions to train,save and load prediction models used in matching</p>
+<dl class="function">
+<dt id="recognize_models.calculate_dist">
+<code class="sig-prename descclassname">recognize_models.</code><code class="sig-name descname">calculate_dist</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">data=False</em>, <em class="sig-param">metric='ecl'</em><span class="sig-paren">)</span><a class="headerlink" href="#recognize_models.calculate_dist" title="Permalink to this definition">¶</a></dt>
+<dd><p>caluclate distance between two embeddings.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>numpy array</em>) – the fist embedding to considre</p></li>
+<li><p><strong>data</strong> (<em>numpy array</em>) – array of embeddings to which we should compare.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>distances from each data point to tthe target.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dist (nunpy array)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="recognize_models.create_test_set">
+<code class="sig-prename descclassname">recognize_models.</code><code class="sig-name descname">create_test_set</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">prec</em><span class="sig-paren">)</span><a class="headerlink" href="#recognize_models.create_test_set" title="Permalink to this definition">¶</a></dt>
+<dd><p>helper function to creat  testing set for xgboost model</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>list of Face</em>) – input data</p></li>
+<li><p><strong>perc</strong> (<em>float</em>) – between 0 and 1 the percentage of data to use in test set</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the testing data
+int (int) : number of classes in test set
+names (list of string) : list of people name in testing set</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>data (numpy array)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="recognize_models.load_kdtree">
+<code class="sig-prename descclassname">recognize_models.</code><code class="sig-name descname">load_kdtree</code><span class="sig-paren">(</span><em class="sig-param">model_dir='C:\\Users\\Ali\\Desktop\\FaceReco\\FaceApp\\facelib\\recognizers\\models\\match\\kdtree.pkl'</em><span class="sig-paren">)</span><a class="headerlink" href="#recognize_models.load_kdtree" title="Permalink to this definition">¶</a></dt>
+<dd><p>loads kdtree model</p>
+<dl class="simple">
+<dt>Args :</dt><dd><p>model_dir (string) :  the saved model diracoty</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the saved model</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>tree (kdtree model)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="recognize_models.load_kmeans">
+<code class="sig-prename descclassname">recognize_models.</code><code class="sig-name descname">load_kmeans</code><span class="sig-paren">(</span><em class="sig-param">model_dir='C:\\Users\\Ali\\Desktop\\FaceReco\\FaceApp\\facelib\\recognizers\\models\\match\\kmeans.pkl'</em>, <em class="sig-param">names_dir='C:\\Users\\Ali\\Desktop\\FaceReco\\FaceApp\\facelib\\recognizers\\models\\match\\kmeans_labels.pkl'</em><span class="sig-paren">)</span><a class="headerlink" href="#recognize_models.load_kmeans" title="Permalink to this definition">¶</a></dt>
+<dd><p>load kmeans model and culsters labels</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_dir</strong> (<em>string</em>) – saved model diractory</p></li>
+<li><p><strong>names_dir</strong> (<em>string</em>) – saved labels diractory</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the saved model
+lables (list of string) : clusters labels</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>model (kmeans model)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="recognize_models.load_xgboost">
+<code class="sig-prename descclassname">recognize_models.</code><code class="sig-name descname">load_xgboost</code><span class="sig-paren">(</span><em class="sig-param">model_dir='C:\\Users\\Ali\\Desktop\\FaceReco\\FaceApp\\facelib\\recognizers\\models\\match\\'</em><span class="sig-paren">)</span><a class="headerlink" href="#recognize_models.load_xgboost" title="Permalink to this definition">¶</a></dt>
+<dd><p>load xgboost model and classes names</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>model_dir</strong> (<em>string</em>) – the saved model diracoty</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the trained model
+names (list of string) : list of classes names (people names)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bst (xgboost model)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="recognize_models.prepare_data_xgboost">
+<code class="sig-prename descclassname">recognize_models.</code><code class="sig-name descname">prepare_data_xgboost</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">perc</em><span class="sig-paren">)</span><a class="headerlink" href="#recognize_models.prepare_data_xgboost" title="Permalink to this definition">¶</a></dt>
+<dd><p>prepares data to be used in sgboost training</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>list of Face</em>) – input data</p></li>
+<li><p><strong>perc</strong> (<em>float</em>) – between 0 and 1 the percentage of data to use in training set</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="recognize_models.prepare_face_data">
+<code class="sig-prename descclassname">recognize_models.</code><code class="sig-name descname">prepare_face_data</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="headerlink" href="#recognize_models.prepare_face_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>helper function to prepare data . it extracts embeddings from list of Face</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>list of Face</em>) – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the embeddings extracted from input</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>emb (numpy array)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="recognize_models.prepare_kmeans">
+<code class="sig-prename descclassname">recognize_models.</code><code class="sig-name descname">prepare_kmeans</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="headerlink" href="#recognize_models.prepare_kmeans" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>prepare data for kmeans culstering</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>data (list of Face) : the data to use</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="simple">
+<dt>Returns :</dt><dd><p>emb (numpy array) : data embeddings
+names (list of string) : the names of people in the data set
+int (int) : the count of different people in the dataset</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="recognize_models.prepare_sample_kmeans">
+<code class="sig-prename descclassname">recognize_models.</code><code class="sig-name descname">prepare_sample_kmeans</code><span class="sig-paren">(</span><em class="sig-param">sample</em><span class="sig-paren">)</span><a class="headerlink" href="#recognize_models.prepare_sample_kmeans" title="Permalink to this definition">¶</a></dt>
+<dd><p>prepare sample for kmeans prediction basicly chaning its shape</p>
+<dl class="simple">
+<dt>Args :</dt><dd><p>sample (numpy array) : the input sample</p>
+</dd>
+<dt>Returns :</dt><dd><p>sample (numpy array) : the processed sample</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="recognize_models.train_kdtree">
+<code class="sig-prename descclassname">recognize_models.</code><code class="sig-name descname">train_kdtree</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">leaf_size=2</em>, <em class="sig-param">save_tree=True</em>, <em class="sig-param">save_dir='C:\\Users\\Ali\\Desktop\\FaceReco\\FaceApp\\facelib\\recognizers\\models\\match\\'</em><span class="sig-paren">)</span><a class="headerlink" href="#recognize_models.train_kdtree" title="Permalink to this definition">¶</a></dt>
+<dd><p>train kdtree model and save it to the disk as .pkl file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>list of Face</em>) – list of face instance containes informations about the data you want to use to train kdtree model</p></li>
+<li><p><strong>leaf_size</strong> (<em>int</em>) – the min leaf size of kdtree model</p></li>
+<li><p><strong>save_tree</strong> (<em>boolean</em>) – if True save the trained model to the disk</p></li>
+<li><p><strong>save_dir</strong> (<em>string</em>) – the saving diracoty</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the trained model</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>tree (kdtree model)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="recognize_models.train_kmeans">
+<code class="sig-prename descclassname">recognize_models.</code><code class="sig-name descname">train_kmeans</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">n_clusters</em>, <em class="sig-param">names</em>, <em class="sig-param">save_dir='C:\\Users\\Ali\\Desktop\\FaceReco\\FaceApp\\facelib\\recognizers\\models\\match\\'</em><span class="sig-paren">)</span><a class="headerlink" href="#recognize_models.train_kmeans" title="Permalink to this definition">¶</a></dt>
+<dd><p>train and save kmenas culstering model</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>list of Face</em>) – input data</p></li>
+<li><p><strong>n_clusters</strong> (<em>int</em>) – number of required cluster should be equal or greater than  number of people in data set</p></li>
+<li><p><strong>names</strong> (<em>list of string</em>) – names of people in data set</p></li>
+<li><p><strong>save_dir</strong> (<em>string</em>) – the saving diracoty</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Returns :</dt><dd><p>True if training was successfull</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="recognize_models.train_xgboost">
+<code class="sig-prename descclassname">recognize_models.</code><code class="sig-name descname">train_xgboost</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">tdata</em>, <em class="sig-param">num_cals</em>, <em class="sig-param">names</em>, <em class="sig-param">save_model=True</em>, <em class="sig-param">save_dir='C:\\Users\\Ali\\Desktop\\FaceReco\\FaceApp\\facelib\\recognizers\\models\\match\\'</em><span class="sig-paren">)</span><a class="headerlink" href="#recognize_models.train_xgboost" title="Permalink to this definition">¶</a></dt>
+<dd><p>train xgboost model</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>list of Face</em>) – the training data</p></li>
+<li><p><strong>tdata</strong> (<em>list of Face</em>) – the testing data</p></li>
+<li><p><strong>num_cals</strong> (<em>int</em>) – number of classes (different people) in the data</p></li>
+<li><p><strong>names</strong> (<em>list of String</em>) – the names of people (the classes names)</p></li>
+<li><p><strong>save_dir</strong> (<em>string</em>) – the saving diracoty</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Returns :</dt><dd><p>True if training was successfull</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Ali Mohammad
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

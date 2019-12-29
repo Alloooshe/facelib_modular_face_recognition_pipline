@@ -1,0 +1,444 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>facematch module &mdash; Face Lib 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Face Lib
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">facematch module</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Face Lib</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>facematch module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/facematch.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-facematch">
+<span id="facematch-module"></span><h1>facematch module<a class="headerlink" href="#module-facematch" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="facematch.FaceMatch">
+<em class="property">class </em><code class="sig-prename descclassname">facematch.</code><code class="sig-name descname">FaceMatch</code><a class="headerlink" href="#facematch.FaceMatch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>FaceMatch is the class wrapping all face matching process</p>
+<dl class="attribute">
+<dt id="facematch.FaceMatch.data">
+<code class="sig-name descname">data</code><a class="headerlink" href="#facematch.FaceMatch.data" title="Permalink to this definition">¶</a></dt>
+<dd><p>comparision data</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list of Face</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="facematch.FaceMatch.kdtree_model">
+<code class="sig-name descname">kdtree_model</code><a class="headerlink" href="#facematch.FaceMatch.kdtree_model" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>kdtree model</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="facematch.FaceMatch.xgboost_model">
+<code class="sig-name descname">xgboost_model</code><a class="headerlink" href="#facematch.FaceMatch.xgboost_model" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>xgboost model</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="facematch.FaceMatch.kmeans_model">
+<code class="sig-name descname">kmeans_model</code><a class="headerlink" href="#facematch.FaceMatch.kmeans_model" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>kmeans model</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="facematch.FaceMatch.kmeans_labels">
+<code class="sig-name descname">kmeans_labels</code><a class="headerlink" href="#facematch.FaceMatch.kmeans_labels" title="Permalink to this definition">¶</a></dt>
+<dd><p>the names of clusters</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list of string</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="facematch.FaceMatch.isloaded_xgboost">
+<code class="sig-name descname">isloaded_xgboost</code><a class="headerlink" href="#facematch.FaceMatch.isloaded_xgboost" title="Permalink to this definition">¶</a></dt>
+<dd><p>True if model is loaded</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>boolean</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="facematch.FaceMatch.isloaded_kdtree">
+<code class="sig-name descname">isloaded_kdtree</code><a class="headerlink" href="#facematch.FaceMatch.isloaded_kdtree" title="Permalink to this definition">¶</a></dt>
+<dd><p>True if model is loaded</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>boolean</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="facematch.FaceMatch.isloaded_kmeans">
+<code class="sig-name descname">isloaded_kmeans</code><a class="headerlink" href="#facematch.FaceMatch.isloaded_kmeans" title="Permalink to this definition">¶</a></dt>
+<dd><p>True if model is loaded</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>boolean</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="facematch.FaceMatch.calculate_dist">
+<code class="sig-name descname">calculate_dist</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">data=False</em>, <em class="sig-param">metric='ecl'</em><span class="sig-paren">)</span><a class="headerlink" href="#facematch.FaceMatch.calculate_dist" title="Permalink to this definition">¶</a></dt>
+<dd><p>caluclate distance between two embeddings.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>numpy array</em>) – the fist embedding to considre</p></li>
+<li><p><strong>data</strong> (<em>numpy array</em>) – array of embeddings to which we should compare.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>distances from each data point to tthe target.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dist (nunpy array)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="facematch.FaceMatch.featurefusion_recognition">
+<code class="sig-name descname">featurefusion_recognition</code><span class="sig-paren">(</span><em class="sig-param">emb</em>, <em class="sig-param">model_name</em>, <em class="sig-param">prev=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#facematch.FaceMatch.featurefusion_recognition" title="Permalink to this definition">¶</a></dt>
+<dd><p>uses feature fusion  method to perfome matching  on image</p>
+<dl class="simple">
+<dt>Args :</dt><dd><p>emb (numpy array) : sample embeddings
+model_name (string) : name of the mathcing model to use
+prev(list of string) : names of prevoius matchings</p>
+</dd>
+<dt>Returns :</dt><dd><p>string name of the person
+int number of votes for this name</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="facematch.FaceMatch.get_name_from_data">
+<code class="sig-name descname">get_name_from_data</code><span class="sig-paren">(</span><em class="sig-param">ind=0</em><span class="sig-paren">)</span><a class="headerlink" href="#facematch.FaceMatch.get_name_from_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>helper funciton to get the name of sample in data using its index</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>ind</strong> (<em>int</em>) – the index of the sample</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>string name of the sample in the index</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="facematch.FaceMatch.match_face">
+<code class="sig-name descname">match_face</code><span class="sig-paren">(</span><em class="sig-param">sample</em>, <em class="sig-param">model_name</em><span class="sig-paren">)</span><a class="headerlink" href="#facematch.FaceMatch.match_face" title="Permalink to this definition">¶</a></dt>
+<dd><p>wrapper function to perfom matching</p>
+<dl class="simple">
+<dt>Args :</dt><dd><p>sample (numpy array) : the embeddings of the target
+model_name (string) : name of the model to use in matching</p>
+</dd>
+<dt>Returns :</dt><dd><p>name (string) : identity of target
+int index of the matched person ion the data set
+float distance between target and match</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="facematch.FaceMatch.match_face_kdtree">
+<code class="sig-name descname">match_face_kdtree</code><span class="sig-paren">(</span><em class="sig-param">sample</em>, <em class="sig-param">eps=0.3</em>, <em class="sig-param">k=2</em>, <em class="sig-param">r=0.5</em>, <em class="sig-param">threshold=0.2</em><span class="sig-paren">)</span><a class="headerlink" href="#facematch.FaceMatch.match_face_kdtree" title="Permalink to this definition">¶</a></dt>
+<dd><p>match sample with data using kdtree model</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sample</strong> (<em>numpy array</em>) – the embeddings of the target</p></li>
+<li><p><strong>eps</strong> (<em>float</em>) – used to detect unkown condition if the two closest  prediction are smaller than eps it detects unkwon condition</p></li>
+<li><p><strong>k</strong> (<em>int</em>) – number of predictions required default is 2</p></li>
+<li><p><strong>r</strong> (<em>float</em>) – radius of predictions</p></li>
+<li><p><strong>threshold</strong> (<em>float</em>) – threshold to reject prediction</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Retuns:</dt><dd><p>name (string) : identity of target
+int index of the matched person ion the data set
+float distance between target and match</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="facematch.FaceMatch.match_face_kmeans">
+<code class="sig-name descname">match_face_kmeans</code><span class="sig-paren">(</span><em class="sig-param">sample</em>, <em class="sig-param">eps=0.01</em><span class="sig-paren">)</span><a class="headerlink" href="#facematch.FaceMatch.match_face_kmeans" title="Permalink to this definition">¶</a></dt>
+<dd><p>match sample with data using kmeans model</p>
+<dl class="simple">
+<dt>Args :</dt><dd><p>sample (numpy array) : the embeddings of the target</p>
+</dd>
+<dt>Retuns:</dt><dd><p>name (string) : identity of target
+int index of the matched person ion the data set
+float distance between target and match</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="facematch.FaceMatch.match_face_knn">
+<code class="sig-name descname">match_face_knn</code><span class="sig-paren">(</span><em class="sig-param">sample</em>, <em class="sig-param">eps=0.05</em><span class="sig-paren">)</span><a class="headerlink" href="#facematch.FaceMatch.match_face_knn" title="Permalink to this definition">¶</a></dt>
+<dd><p>match sample with data using knn method</p>
+<dl class="simple">
+<dt>Args :</dt><dd><p>sample (numpy array) : the embeddings of the target
+eps (float) : the eps to detect unkown matching</p>
+</dd>
+<dt>Retuns:</dt><dd><p>name (string) : identity of target
+int index of the matched person ion the data set
+float distance between target and match</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="facematch.FaceMatch.match_face_xgboost">
+<code class="sig-name descname">match_face_xgboost</code><span class="sig-paren">(</span><em class="sig-param">sample</em><span class="sig-paren">)</span><a class="headerlink" href="#facematch.FaceMatch.match_face_xgboost" title="Permalink to this definition">¶</a></dt>
+<dd><p>match sample with data using xgboost model</p>
+<dl class="simple">
+<dt>Args :</dt><dd><p>sample (numpy array) : the embeddings of the target</p>
+</dd>
+<dt>Retuns:</dt><dd><p>name (string) : identity of target
+int index of the matched person ion the data set
+float distance between target and match</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="facematch.FaceMatch.prepare_emb_sample">
+<code class="sig-name descname">prepare_emb_sample</code><span class="sig-paren">(</span><em class="sig-param">sample</em><span class="sig-paren">)</span><a class="headerlink" href="#facematch.FaceMatch.prepare_emb_sample" title="Permalink to this definition">¶</a></dt>
+<dd><p>helper funciton to prepare sample for matching chaing its shape</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sample</strong> (<em>numpy array</em>) – the embeddings of the target</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Returns :</dt><dd><p>q (numpy array)  : processed sample</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="facematch.FaceMatch.voting_recognition">
+<code class="sig-name descname">voting_recognition</code><span class="sig-paren">(</span><em class="sig-param">emb</em>, <em class="sig-param">model_name</em>, <em class="sig-param">prev=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#facematch.FaceMatch.voting_recognition" title="Permalink to this definition">¶</a></dt>
+<dd><p>uses voting method to perfome matching  on image</p>
+<dl class="simple">
+<dt>Args :</dt><dd><p>emb (numpy array) : sample embeddings
+model_name (string) : name of the mathcing model to use
+prev(list of string) : names of prevoius matchings</p>
+</dd>
+<dt>Returns :</dt><dd><p>string name of the person
+int number of votes for this name</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Ali Mohammad
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

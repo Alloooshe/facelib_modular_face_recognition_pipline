@@ -1,0 +1,7 @@
+detector\_mtcnn module
+======================
+
+.. automodule:: detector_mtcnn
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,7 @@
+person\_face module
+===================
+
+.. automodule:: person_face
+   :members:
+   :undoc-members:
+   :show-inheritance:

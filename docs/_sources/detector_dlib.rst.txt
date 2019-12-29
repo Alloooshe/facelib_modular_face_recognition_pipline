@@ -1,0 +1,7 @@
+detector\_dlib module
+=====================
+
+.. automodule:: detector_dlib
+   :members:
+   :undoc-members:
+   :show-inheritance:

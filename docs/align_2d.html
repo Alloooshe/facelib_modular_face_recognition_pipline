@@ -1,0 +1,277 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>align_2d module &mdash; Face Lib 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Face Lib
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">align_2d module</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Face Lib</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>align_2d module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/align_2d.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-align_2d">
+<span id="align-2d-module"></span><h1>align_2d module<a class="headerlink" href="#module-align_2d" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="align_2d.FaceAligner2D">
+<em class="property">class </em><code class="sig-prename descclassname">align_2d.</code><code class="sig-name descname">FaceAligner2D</code><a class="headerlink" href="#align_2d.FaceAligner2D" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>class that implements FaceAligner and perform 2d aligment</p>
+<dl class="attribute">
+<dt id="align_2d.FaceAligner2D.desiredLeftEye">
+<code class="sig-name descname">desiredLeftEye</code><a class="headerlink" href="#align_2d.FaceAligner2D.desiredLeftEye" title="Permalink to this definition">¶</a></dt>
+<dd><p>cooridantion of the relative position of the left eye used to specify the between eyes distance default(0.32,0.32)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="align_2d.FaceAligner2D.desiredFaceWidth">
+<code class="sig-name descname">desiredFaceWidth</code><a class="headerlink" href="#align_2d.FaceAligner2D.desiredFaceWidth" title="Permalink to this definition">¶</a></dt>
+<dd><p>the desired width of the aligned face default : 160</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="align_2d.FaceAligner2D.desiredFaceHeight">
+<code class="sig-name descname">desiredFaceHeight</code><a class="headerlink" href="#align_2d.FaceAligner2D.desiredFaceHeight" title="Permalink to this definition">¶</a></dt>
+<dd><p>the desired height of the aligned facedefault same as width</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="align_2d.FaceAligner2D.align">
+<code class="sig-name descname">align</code><span class="sig-paren">(</span><em class="sig-param">image</em>, <em class="sig-param">landmarks</em><span class="sig-paren">)</span><a class="headerlink" href="#align_2d.FaceAligner2D.align" title="Permalink to this definition">¶</a></dt>
+<dd><p>preform the alignement process</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image</strong> (<em>numpy array</em>) – the image of face to align</p></li>
+<li><p><strong>landmarks</strong> (<em>numpy array</em>) – containes the coordinations of the faces could be 68 landmarks in the case of dlib or 5 in the case of mtcnn</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the parsed ouput numpy array of face images</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="align_2d.FaceAligner2D.configure">
+<code class="sig-name descname">configure</code><span class="sig-paren">(</span><em class="sig-param">desiredLeftEye</em>, <em class="sig-param">desiredFaceWidth</em>, <em class="sig-param">desiredFaceHeight</em><span class="sig-paren">)</span><a class="headerlink" href="#align_2d.FaceAligner2D.configure" title="Permalink to this definition">¶</a></dt>
+<dd><p>set the desired configuration of the model</p>
+<dl class="simple">
+<dt>Args :</dt><dd><p>desiredLeftEye (tuple) :  cooridantion of the relative position of the left eye used to specify the between eyes distance default(0.32,0.32)
+desiredFaceWidth (int) : the desired width of the aligned face default : 160
+desiredFaceHeight (int) : the desired height of the aligned facedefault same as width</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="align_2d.FaceAligner2D.name">
+<code class="sig-name descname">name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#align_2d.FaceAligner2D.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns the name of the model</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="align_2d.FaceAligner2D.parse_output">
+<code class="sig-name descname">parse_output</code><span class="sig-paren">(</span><em class="sig-param">faces</em><span class="sig-paren">)</span><a class="headerlink" href="#align_2d.FaceAligner2D.parse_output" title="Permalink to this definition">¶</a></dt>
+<dd><p>pares output to fit in the pipline expectations</p>
+<dl class="simple">
+<dt>Returns :</dt><dd><p>faces (numpy array) : the aligned faces array</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Ali Mohammad
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

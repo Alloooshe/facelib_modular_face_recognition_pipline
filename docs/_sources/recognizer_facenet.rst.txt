@@ -1,0 +1,7 @@
+recognizer\_facenet module
+==========================
+
+.. automodule:: recognizer_facenet
+   :members:
+   :undoc-members:
+   :show-inheritance:

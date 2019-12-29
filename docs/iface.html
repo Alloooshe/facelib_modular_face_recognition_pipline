@@ -1,0 +1,322 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>iface module &mdash; Face Lib 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Face Lib
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">iface module</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Face Lib</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>iface module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/iface.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-iface">
+<span id="iface-module"></span><h1>iface module<a class="headerlink" href="#module-iface" title="Permalink to this headline">¶</a></h1>
+<p>this file containes the  FaceCore api.</p>
+<dl class="class">
+<dt id="iface.IFace">
+<em class="property">class </em><code class="sig-prename descclassname">iface.</code><code class="sig-name descname">IFace</code><a class="headerlink" href="#iface.IFace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>IFace is an api for pyqt5 and face core its mission is to provide a easy access to the functionalities provided by facecore</p>
+<dl class="attribute">
+<dt id="iface.IFace.core">
+<code class="sig-name descname">core</code><a class="headerlink" href="#iface.IFace.core" title="Permalink to this definition">¶</a></dt>
+<dd><p>the facecore instance to use</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="facecore.html#facecore.FaceCore" title="facecore.FaceCore">FaceCore</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="iface.IFace.add_person">
+<code class="sig-name descname">add_person</code><span class="sig-paren">(</span><em class="sig-param">image</em>, <em class="sig-param">name</em><span class="sig-paren">)</span><a class="headerlink" href="#iface.IFace.add_person" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="iface.IFace.compare_images">
+<code class="sig-name descname">compare_images</code><span class="sig-paren">(</span><em class="sig-param">image1</em>, <em class="sig-param">image2</em>, <em class="sig-param">thr=1.0</em><span class="sig-paren">)</span><a class="headerlink" href="#iface.IFace.compare_images" title="Permalink to this definition">¶</a></dt>
+<dd><p>wrapper function to compare two images if the belong to the same person or not</p>
+<dl class="simple">
+<dt>Args :</dt><dd><p>image1 (string) : path to first image
+image2 (string) : path to second image
+thr (float) : threshold to compare eculidian distance</p>
+</dd>
+<dt>Returns :</dt><dd><p>True if the same person appears in the two images and els False
+string : the message to explain which image doesn’t have a face or ok to indicates no matched faces</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="iface.IFace.process_image">
+<code class="sig-name descname">process_image</code><span class="sig-paren">(</span><em class="sig-param">image</em>, <em class="sig-param">model</em>, <em class="sig-param">show=False</em><span class="sig-paren">)</span><a class="headerlink" href="#iface.IFace.process_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>wrapper function to recognize the name of the person who appears in an image</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image</strong> (<em>string</em>) – the system path to the image (should be all in latin letters)</p></li>
+<li><p><strong>model</strong> (<em>string</em>) – the recognition model (knn kmeans kdtree)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>name (string - list) the name of the recognized person or list of names of people who appear in the image</dt><dd><p>if no face was detected it returns  ‘no face detected’</p>
+</dd>
+</dl>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="iface.IFace.set_pipline_option">
+<code class="sig-name descname">set_pipline_option</code><span class="sig-paren">(</span><em class="sig-param">detect_model='mtcnn'</em>, <em class="sig-param">align_model='2d'</em>, <em class="sig-param">recognize_model='facenet'</em>, <em class="sig-param">prediction_model='knn'</em>, <em class="sig-param">track_model='sort'</em>, <em class="sig-param">rescale_options='auto'</em><span class="sig-paren">)</span><a class="headerlink" href="#iface.IFace.set_pipline_option" title="Permalink to this definition">¶</a></dt>
+<dd><p>set the models to use when performing pipline combined operations.</p>
+<p>set the models which the library should load and use when preforming one or more of the pipline options.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>detect_model</strong> (<em>string</em>) – detection model (mtcnn  dlib)</p></li>
+<li><p><strong>align_model</strong> (<em>string</em>) – alignment model (2d)</p></li>
+<li><p><strong>recognize_model</strong> (<em>string</em>) – recognition model (facenet arcface)</p></li>
+<li><p><strong>prediction_model</strong> (<em>string</em>) – prediction model (knn kmeans kdtree)</p></li>
+<li><p><strong>track_model</strong> (<em>string</em>) – tracking model (sort)</p></li>
+<li><p><strong>rescale_options</strong> (<em>string/array</em>) – if set to auto this will let the library decide how to process input image or
+provide the width and hieght to rescale the image.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if all configuration was successfully done.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="iface.IFace.verificate">
+<code class="sig-name descname">verificate</code><span class="sig-paren">(</span><em class="sig-param">emb1</em>, <em class="sig-param">emb2</em>, <em class="sig-param">eps=1.1</em><span class="sig-paren">)</span><a class="headerlink" href="#iface.IFace.verificate" title="Permalink to this definition">¶</a></dt>
+<dd><p>verficate is a function to verificate that two embeddings belong to the same person</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>emb1</strong> (<em>numpy array</em>) – the embedding vector of the first face</p></li>
+<li><p><strong>emb2</strong> (<em>numpy array</em>) – the embedding vector of the second face</p></li>
+<li><p><strong>eps</strong> (<em>float</em>) – the threshold value to decide if the embeddings belong to the same person or not</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if the two embeddings ecluidian distance is smaller than eps else False</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="iface.IFace.video_processing">
+<code class="sig-name descname">video_processing</code><span class="sig-paren">(</span><em class="sig-param">video_path</em>, <em class="sig-param">write_path=None</em>, <em class="sig-param">write_video=False</em>, <em class="sig-param">show_video=True</em>, <em class="sig-param">video_method='vote'</em><span class="sig-paren">)</span><a class="headerlink" href="#iface.IFace.video_processing" title="Permalink to this definition">¶</a></dt>
+<dd><p>warpper function to showcase the use on videos saved to the disk - uses process_stream</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>video_path</strong> (<em>string</em>) – path to the target video</p></li>
+<li><p><strong>write_path</strong> (<em>string</em>) – the path to write the video result  only used when write_video is true</p></li>
+<li><p><strong>write_video</strong> (<em>boolen</em>) – to tell if you want to save the result or not</p></li>
+<li><p><strong>show_video</strong> (<em>boolean</em>) – to tell if you want to show the result video when processed</p></li>
+<li><p><strong>video_method</strong> (<em>string</em>) – recognition method of face recognition</p></li>
+</ul>
+</dd>
+</dl>
+<p>Returns:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="iface.IFace.webcame_processing">
+<code class="sig-name descname">webcame_processing</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#iface.IFace.webcame_processing" title="Permalink to this definition">¶</a></dt>
+<dd><p>wrapper function to show case the webcame demo .. uses process_stream function</p>
+<p>Args:</p>
+<p>Returns:</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Ali Mohammad
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

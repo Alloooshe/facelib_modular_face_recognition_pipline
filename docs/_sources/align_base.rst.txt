@@ -1,0 +1,7 @@
+align\_base module
+==================
+
+.. automodule:: align_base
+   :members:
+   :undoc-members:
+   :show-inheritance:

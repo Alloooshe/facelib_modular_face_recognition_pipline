@@ -1,0 +1,330 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>recognizer_facenet module &mdash; Face Lib 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Face Lib
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">recognizer_facenet module</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Face Lib</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>recognizer_facenet module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/recognizer_facenet.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-recognizer_facenet">
+<span id="recognizer-facenet-module"></span><h1>recognizer_facenet module<a class="headerlink" href="#module-recognizer_facenet" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="recognizer_facenet.FaceRecognizerFaceNet">
+<em class="property">class </em><code class="sig-prename descclassname">recognizer_facenet.</code><code class="sig-name descname">FaceRecognizerFaceNet</code><a class="headerlink" href="#recognizer_facenet.FaceRecognizerFaceNet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">recognizers.recognizer_base.FaceRecognizer</span></code></p>
+<p>FaceRecognizerFaceNet impelements FaceReconizer and perform the embedding process using facenet model</p>
+<dl class="attribute">
+<dt id="recognizer_facenet.FaceRecognizerFaceNet.isloaded">
+<code class="sig-name descname">isloaded</code><a class="headerlink" href="#recognizer_facenet.FaceRecognizerFaceNet.isloaded" title="Permalink to this definition">¶</a></dt>
+<dd><p>True if the model is loaded and false otherwise</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="recognizer_facenet.FaceRecognizerFaceNet.sess">
+<code class="sig-name descname">sess</code><a class="headerlink" href="#recognizer_facenet.FaceRecognizerFaceNet.sess" title="Permalink to this definition">¶</a></dt>
+<dd><p>the local session to use when performing operations</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>tensorflow session</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="recognizer_facenet.FaceRecognizerFaceNet.model_dir">
+<code class="sig-name descname">model_dir</code><a class="headerlink" href="#recognizer_facenet.FaceRecognizerFaceNet.model_dir" title="Permalink to this definition">¶</a></dt>
+<dd><p>diractory to facenet model</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>string</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="recognizer_facenet.FaceRecognizerFaceNet.NAME">
+<code class="sig-name descname">NAME</code><em class="property"> = 'recognizer facenet'</em><a class="headerlink" href="#recognizer_facenet.FaceRecognizerFaceNet.NAME" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="recognizer_facenet.FaceRecognizerFaceNet.clean">
+<code class="sig-name descname">clean</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#recognizer_facenet.FaceRecognizerFaceNet.clean" title="Permalink to this definition">¶</a></dt>
+<dd><p>clean the loaded model</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="recognizer_facenet.FaceRecognizerFaceNet.configure">
+<code class="sig-name descname">configure</code><span class="sig-paren">(</span><em class="sig-param">model_dir</em>, <em class="sig-param">input_map</em><span class="sig-paren">)</span><a class="headerlink" href="#recognizer_facenet.FaceRecognizerFaceNet.configure" title="Permalink to this definition">¶</a></dt>
+<dd><p>set the configuration of facenet model</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>minsize</strong> (<em>int</em>) – the minimum size of detected faces</p></li>
+<li><p><strong>threshold</strong> (<em>list</em>) – the float values to use in filtering the faces smaller values means smaller confidance</p></li>
+<li><p><strong>facetor</strong> (<em>float</em>) – the scaling factor of the face</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="recognizer_facenet.FaceRecognizerFaceNet.extract_features">
+<code class="sig-name descname">extract_features</code><span class="sig-paren">(</span><em class="sig-param">image</em>, <em class="sig-param">clean=True</em><span class="sig-paren">)</span><a class="headerlink" href="#recognizer_facenet.FaceRecognizerFaceNet.extract_features" title="Permalink to this definition">¶</a></dt>
+<dd><p>embeds face image into vector of 512 value that represent the face using the facenet model</p>
+<dl class="simple">
+<dt>Args :</dt><dd><p>image (list numpy array) : the input aligned face image or images of shape (n,3,160,160)
+clean (boolean) : if true it clean the loaded model</p>
+</dd>
+<dt>Returns :</dt><dd><p>parsed feature vector of shape (n,512)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="recognizer_facenet.FaceRecognizerFaceNet.get_model_filenames">
+<code class="sig-name descname">get_model_filenames</code><span class="sig-paren">(</span><em class="sig-param">model_dir</em><span class="sig-paren">)</span><a class="headerlink" href="#recognizer_facenet.FaceRecognizerFaceNet.get_model_filenames" title="Permalink to this definition">¶</a></dt>
+<dd><p>helper function to get he names of model files in diractory</p>
+<dl class="simple">
+<dt>Args :</dt><dd><p>model_dir (string) : diractory of the model</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the names of meta files in diractory
+ckpt_file (list) : the names of cpkt files in diractory</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>meta_file (list)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="recognizer_facenet.FaceRecognizerFaceNet.load">
+<code class="sig-name descname">load</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#recognizer_facenet.FaceRecognizerFaceNet.load" title="Permalink to this definition">¶</a></dt>
+<dd><p>load the wights of facenet model to prepare for use it also initialize the sess attribute</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>True if the model was loaded successfully</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="recognizer_facenet.FaceRecognizerFaceNet.name">
+<code class="sig-name descname">name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#recognizer_facenet.FaceRecognizerFaceNet.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="recognizer_facenet.FaceRecognizerFaceNet.parse_output">
+<code class="sig-name descname">parse_output</code><span class="sig-paren">(</span><em class="sig-param">emb</em><span class="sig-paren">)</span><a class="headerlink" href="#recognizer_facenet.FaceRecognizerFaceNet.parse_output" title="Permalink to this definition">¶</a></dt>
+<dd><p>helper function to parse ouput of the recognizer to fit in the pipline - can be ignored</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="recognizer_facenet.FaceRecognizerFaceNet.prewhiten">
+<code class="sig-name descname">prewhiten</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="headerlink" href="#recognizer_facenet.FaceRecognizerFaceNet.prewhiten" title="Permalink to this definition">¶</a></dt>
+<dd><p>helper function to normalize the input image by sutracting the mean and divide on the std so all values are between 0 and 1</p>
+<dl class="simple">
+<dt>Args :</dt><dd><p>x (numpy array) : input array</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>normalized input</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>y (numpy array)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Ali Mohammad
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

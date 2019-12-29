@@ -1,0 +1,7 @@
+recognize\_models module
+========================
+
+.. automodule:: recognize_models
+   :members:
+   :undoc-members:
+   :show-inheritance:

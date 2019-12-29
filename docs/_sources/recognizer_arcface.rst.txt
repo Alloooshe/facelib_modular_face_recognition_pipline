@@ -1,0 +1,7 @@
+recognizer\_arcface module
+==========================
+
+.. automodule:: recognizer_arcface
+   :members:
+   :undoc-members:
+   :show-inheritance:

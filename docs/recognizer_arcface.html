@@ -1,0 +1,355 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>recognizer_arcface module &mdash; Face Lib 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Face Lib
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">recognizer_arcface module</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Face Lib</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>recognizer_arcface module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/recognizer_arcface.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-recognizer_arcface">
+<span id="recognizer-arcface-module"></span><h1>recognizer_arcface module<a class="headerlink" href="#module-recognizer_arcface" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="recognizer_arcface.FaceRecognizerArcFace">
+<em class="property">class </em><code class="sig-prename descclassname">recognizer_arcface.</code><code class="sig-name descname">FaceRecognizerArcFace</code><a class="headerlink" href="#recognizer_arcface.FaceRecognizerArcFace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">recognizers.recognizer_base.FaceRecognizer</span></code></p>
+<p>FaceRecognizerArcFace impelements FaceReconizer and perform the embedding process using arcface  model</p>
+<dl class="attribute">
+<dt id="recognizer_arcface.FaceRecognizerArcFace.prefix">
+<code class="sig-name descname">prefix</code><a class="headerlink" href="#recognizer_arcface.FaceRecognizerArcFace.prefix" title="Permalink to this definition">¶</a></dt>
+<dd><p>prefix path to arcface model</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>string</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="recognizer_arcface.FaceRecognizerArcFace.ctx">
+<code class="sig-name descname">ctx</code><a class="headerlink" href="#recognizer_arcface.FaceRecognizerArcFace.ctx" title="Permalink to this definition">¶</a></dt>
+<dd><p>the context of cpu/gpu usage set to mx.gpu() to use gpu and mx.cpu() is the default</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="recognizer_arcface.FaceRecognizerArcFace.epoch">
+<code class="sig-name descname">epoch</code><a class="headerlink" href="#recognizer_arcface.FaceRecognizerArcFace.epoch" title="Permalink to this definition">¶</a></dt>
+<dd><p>the number of loaded model epoch default 0000 used in traing can be ignored</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>number</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="recognizer_arcface.FaceRecognizerArcFace.image_size">
+<code class="sig-name descname">image_size</code><a class="headerlink" href="#recognizer_arcface.FaceRecognizerArcFace.image_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>the size of the input image best is default which is [112 112]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="recognizer_arcface.FaceRecognizerArcFace.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#recognizer_arcface.FaceRecognizerArcFace.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>the arcface model</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>mx model</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="recognizer_arcface.FaceRecognizerArcFace.isloaded">
+<code class="sig-name descname">isloaded</code><a class="headerlink" href="#recognizer_arcface.FaceRecognizerArcFace.isloaded" title="Permalink to this definition">¶</a></dt>
+<dd><p>True if the model is loaded</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>boolean</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="recognizer_arcface.FaceRecognizerArcFace.layer">
+<code class="sig-name descname">layer</code><a class="headerlink" href="#recognizer_arcface.FaceRecognizerArcFace.layer" title="Permalink to this definition">¶</a></dt>
+<dd><p>the name of the layer to use as feature vector default is ‘fc1’ which is the fist connected layer</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>string</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="recognizer_arcface.FaceRecognizerArcFace.NAME">
+<code class="sig-name descname">NAME</code><em class="property"> = 'recognizer arcface'</em><a class="headerlink" href="#recognizer_arcface.FaceRecognizerArcFace.NAME" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="recognizer_arcface.FaceRecognizerArcFace.clean">
+<code class="sig-name descname">clean</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#recognizer_arcface.FaceRecognizerArcFace.clean" title="Permalink to this definition">¶</a></dt>
+<dd><p>clean the loaded model</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="recognizer_arcface.FaceRecognizerArcFace.configure">
+<code class="sig-name descname">configure</code><span class="sig-paren">(</span><em class="sig-param">prefix</em>, <em class="sig-param">epoch</em>, <em class="sig-param">layer</em>, <em class="sig-param">image_size</em>, <em class="sig-param">ctx=gpu(0)</em><span class="sig-paren">)</span><a class="headerlink" href="#recognizer_arcface.FaceRecognizerArcFace.configure" title="Permalink to this definition">¶</a></dt>
+<dd><p>set the configuration of arcface model</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>prefix</strong> (<em>string</em>) – prefix path to arcface model</p></li>
+<li><p><strong>ctx</strong> (<em>int</em>) – the context of cpu/gpu usage set to mx.gpu() to use gpu and mx.gpu() is the default</p></li>
+<li><p><strong>epoch</strong> (<em>number</em>) – the number of loaded model epoch default 0000 used in traing can be ignored</p></li>
+<li><p><strong>image_size</strong> (<em>list</em>) – the size of the input image best is default which is [112 112]</p></li>
+<li><p><strong>layer</strong> (<em>string</em>) – the name of the layer to use as feature vector default is ‘fc1’ which is the fist connected layer</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="recognizer_arcface.FaceRecognizerArcFace.extract_features">
+<code class="sig-name descname">extract_features</code><span class="sig-paren">(</span><em class="sig-param">aligned</em>, <em class="sig-param">clean=True</em><span class="sig-paren">)</span><a class="headerlink" href="#recognizer_arcface.FaceRecognizerArcFace.extract_features" title="Permalink to this definition">¶</a></dt>
+<dd><p>embeds face image into vector of 512 value that represent the face using the arface model</p>
+<dl class="simple">
+<dt>Args :</dt><dd><p>aligned (list numpy array) : the input aligned face image or images of shape (n,3,160,160)
+clean (boolean) : if true it clean the loaded model</p>
+</dd>
+<dt>Returns :</dt><dd><p>parsed feature vector of shape (n,512)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="recognizer_arcface.FaceRecognizerArcFace.load">
+<code class="sig-name descname">load</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#recognizer_arcface.FaceRecognizerArcFace.load" title="Permalink to this definition">¶</a></dt>
+<dd><p>load the wights of arcface model to prepare for use it also initialize the sess attribute</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>True if the model was loaded successfully</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="recognizer_arcface.FaceRecognizerArcFace.name">
+<code class="sig-name descname">name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#recognizer_arcface.FaceRecognizerArcFace.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="recognizer_arcface.FaceRecognizerArcFace.parse_input">
+<code class="sig-name descname">parse_input</code><span class="sig-paren">(</span><em class="sig-param">images</em><span class="sig-paren">)</span><a class="headerlink" href="#recognizer_arcface.FaceRecognizerArcFace.parse_input" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>helper function to parse input of the recognizer to fit in the pipline</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>images (list) : the unparesed input of images of faces</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="simple">
+<dt>Returns</dt><dd><p>ret (numpy array): the pared input images of shape (n,3,size,size)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="recognizer_arcface.FaceRecognizerArcFace.parse_output">
+<code class="sig-name descname">parse_output</code><span class="sig-paren">(</span><em class="sig-param">emb</em><span class="sig-paren">)</span><a class="headerlink" href="#recognizer_arcface.FaceRecognizerArcFace.parse_output" title="Permalink to this definition">¶</a></dt>
+<dd><p>helper function to parse ouput of the recognizer  to fit in the pipline - can be ignored</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Ali Mohammad
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

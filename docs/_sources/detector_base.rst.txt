@@ -1,0 +1,7 @@
+detector\_base module
+=====================
+
+.. automodule:: detector_base
+   :members:
+   :undoc-members:
+   :show-inheritance:

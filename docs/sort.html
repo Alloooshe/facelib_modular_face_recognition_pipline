@@ -1,0 +1,300 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>sort module &mdash; Face Lib 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Face Lib
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">sort module</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Face Lib</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>sort module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/sort.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-sort">
+<span id="sort-module"></span><h1>sort module<a class="headerlink" href="#module-sort" title="Permalink to this headline">¶</a></h1>
+<p>SORT: A Simple, Online and Realtime Tracker
+Copyright (C) 2016 Alex Bewley <a class="reference external" href="mailto:alex&#37;&#52;&#48;dynamicdetection&#46;com">alex<span>&#64;</span>dynamicdetection<span>&#46;</span>com</a></p>
+<p>This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.</p>
+<p>This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.</p>
+<p>You should have received a copy of the GNU General Public License
+along with this program.  If not, see &lt;<a class="reference external" href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>&gt;.</p>
+<dl class="class">
+<dt id="sort.KalmanBoxTracker">
+<em class="property">class </em><code class="sig-prename descclassname">sort.</code><code class="sig-name descname">KalmanBoxTracker</code><span class="sig-paren">(</span><em class="sig-param">bbox</em><span class="sig-paren">)</span><a class="headerlink" href="#sort.KalmanBoxTracker" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class represents the internel state of individual tracked objects observed as bbox.</p>
+<dl class="attribute">
+<dt id="sort.KalmanBoxTracker.count">
+<code class="sig-name descname">count</code><em class="property"> = 0</em><a class="headerlink" href="#sort.KalmanBoxTracker.count" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sort.KalmanBoxTracker.get_state">
+<code class="sig-name descname">get_state</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sort.KalmanBoxTracker.get_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the current bounding box estimate.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sort.KalmanBoxTracker.predict">
+<code class="sig-name descname">predict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sort.KalmanBoxTracker.predict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Advances the state vector and returns the predicted bounding box estimate.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sort.KalmanBoxTracker.update">
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">bbox</em><span class="sig-paren">)</span><a class="headerlink" href="#sort.KalmanBoxTracker.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the state vector with observed bbox.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="sort.Sort">
+<em class="property">class </em><code class="sig-prename descclassname">sort.</code><code class="sig-name descname">Sort</code><span class="sig-paren">(</span><em class="sig-param">max_age=1</em>, <em class="sig-param">min_hits=3</em><span class="sig-paren">)</span><a class="headerlink" href="#sort.Sort" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="sort.Sort.parse_output">
+<code class="sig-name descname">parse_output</code><span class="sig-paren">(</span><em class="sig-param">bbox</em><span class="sig-paren">)</span><a class="headerlink" href="#sort.Sort.parse_output" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sort.Sort.process_bbox">
+<code class="sig-name descname">process_bbox</code><span class="sig-paren">(</span><em class="sig-param">bbox</em><span class="sig-paren">)</span><a class="headerlink" href="#sort.Sort.process_bbox" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sort.Sort.update">
+<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">dets</em><span class="sig-paren">)</span><a class="headerlink" href="#sort.Sort.update" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Params:</dt><dd><p>dets - a numpy array of detections in the format [[x1,y1,x2,y2,score],[x1,y1,x2,y2,score],…]</p>
+</dd>
+</dl>
+<p>Requires: this method must be called once for each frame even with empty detections.
+Returns the a similar array, where the last column is the object ID.</p>
+<p>NOTE: The number of objects returned may differ from the number of detections provided.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="sort.associate_detections_to_trackers">
+<code class="sig-prename descclassname">sort.</code><code class="sig-name descname">associate_detections_to_trackers</code><span class="sig-paren">(</span><em class="sig-param">detections</em>, <em class="sig-param">trackers</em>, <em class="sig-param">iou_threshold=0.3</em><span class="sig-paren">)</span><a class="headerlink" href="#sort.associate_detections_to_trackers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assigns detections to tracked object (both represented as bounding boxes)</p>
+<p>Returns 3 lists of matches, unmatched_detections and unmatched_trackers</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="sort.convert_bbox_to_z">
+<code class="sig-prename descclassname">sort.</code><code class="sig-name descname">convert_bbox_to_z</code><span class="sig-paren">(</span><em class="sig-param">bbox</em><span class="sig-paren">)</span><a class="headerlink" href="#sort.convert_bbox_to_z" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Takes a bounding box in the form [x1,y1,x2,y2] and returns z in the form</dt><dd><p>[x,y,s,r] where x,y is the centre of the box and s is the scale/area and r is
+the aspect ratio</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="sort.convert_x_to_bbox">
+<code class="sig-prename descclassname">sort.</code><code class="sig-name descname">convert_x_to_bbox</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">score=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sort.convert_x_to_bbox" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Takes a bounding box in the centre form [x,y,s,r] and returns it in the form</dt><dd><p>[x1,y1,x2,y2] where x1,y1 is the top left and x2,y2 is the bottom right</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="sort.iou">
+<code class="sig-prename descclassname">sort.</code><code class="sig-name descname">iou</code><span class="sig-paren">(</span><em class="sig-param">bb_test</em>, <em class="sig-param">bb_gt</em><span class="sig-paren">)</span><a class="headerlink" href="#sort.iou" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes IUO between two bboxes in the form [x1,y1,x2,y2]</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="sort.parse_args">
+<code class="sig-prename descclassname">sort.</code><code class="sig-name descname">parse_args</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sort.parse_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse input arguments.</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Ali Mohammad
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

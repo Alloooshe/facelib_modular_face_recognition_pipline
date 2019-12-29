@@ -1,0 +1,7 @@
+facematch module
+================
+
+.. automodule:: facematch
+   :members:
+   :undoc-members:
+   :show-inheritance:

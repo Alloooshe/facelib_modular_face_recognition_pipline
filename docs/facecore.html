@@ -1,0 +1,707 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>facecore module &mdash; Face Lib 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Face Lib
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">facecore module</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Face Lib</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>facecore module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/facecore.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-facecore">
+<span id="facecore-module"></span><h1>facecore module<a class="headerlink" href="#module-facecore" title="Permalink to this headline">¶</a></h1>
+<p>this file containes the class FaceCore.</p>
+<dl class="class">
+<dt id="facecore.FaceCore">
+<em class="property">class </em><code class="sig-prename descclassname">facecore.</code><code class="sig-name descname">FaceCore</code><a class="headerlink" href="#facecore.FaceCore" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>FaceCore is the core library wich implements the differenet face recognition pipeline stages.</p>
+<p>FaceCore is the core library wich implements the differenet face recognition pipeline stages
+the library performs:  detection face point extraction  aligment recognition, each step can be
+done using one or more models: this models include : face detection and face features extraction
+models are (mtcnn,dlib model , pyramid box) aligment model is (2d aligment) face embedding models
+are (google facenet ).</p>
+<dl class="attribute">
+<dt id="facecore.FaceCore.detect_models">
+<code class="sig-name descname">detect_models</code><a class="headerlink" href="#facecore.FaceCore.detect_models" title="Permalink to this definition">¶</a></dt>
+<dd><p>containes objects of detection models which helps save model initilization and loading time.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dictionary</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="facecore.FaceCore.recognize_models">
+<code class="sig-name descname">recognize_models</code><a class="headerlink" href="#facecore.FaceCore.recognize_models" title="Permalink to this definition">¶</a></dt>
+<dd><p>containes objects of recognition models which helps save model initilization and loading time.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dictionary</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="facecore.FaceCore.align_models">
+<code class="sig-name descname">align_models</code><a class="headerlink" href="#facecore.FaceCore.align_models" title="Permalink to this definition">¶</a></dt>
+<dd><p>containes objects of aligment methods.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dictionary</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="facecore.FaceCore.track_models">
+<code class="sig-name descname">track_models</code><a class="headerlink" href="#facecore.FaceCore.track_models" title="Permalink to this definition">¶</a></dt>
+<dd><p>contains objects of tracking models.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dictionary</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="facecore.FaceCore.align">
+<code class="sig-name descname">align</code><span class="sig-paren">(</span><em class="sig-param">img</em>, <em class="sig-param">points</em>, <em class="sig-param">model=None</em>, <em class="sig-param">track_time=False</em>, <em class="sig-param">draw=False</em>, <em class="sig-param">raise_profie_flag=False</em><span class="sig-paren">)</span><a class="headerlink" href="#facecore.FaceCore.align" title="Permalink to this definition">¶</a></dt>
+<dd><p>align the image for better recognitions.</p>
+<p>align using one of the allowed aligment models.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image</strong> (<em>numpy array</em>) – the target image.</p></li>
+<li><p><strong>model</strong> (<em>string</em>) – the name of the model you wish to use .</p></li>
+<li><p><strong>draw</strong> (<em>bool</em>) – if you wich to draw results or not .</p></li>
+<li><p><strong>track_time</strong> (<em>bool</em>) – if you wish to track the processing time.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the aligned image.
+align_time (float) : the time it tooks to align the image.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>aligned (numpy array)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="facecore.FaceCore.classify_faces">
+<code class="sig-name descname">classify_faces</code><span class="sig-paren">(</span><em class="sig-param">faces</em>, <em class="sig-param">points</em>, <em class="sig-param">threshold=None</em><span class="sig-paren">)</span><a class="headerlink" href="#facecore.FaceCore.classify_faces" title="Permalink to this definition">¶</a></dt>
+<dd><p>classify faces and coressponding landmarks to big and small ones.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>faces</strong> (<em>numpy array</em>) – the bounding boxes of faces with tracking id.</p></li>
+<li><p><strong>points</strong> (<em>numpy array</em>) – the faces landmarks.</p></li>
+<li><p><strong>threshold</strong> (<em>float</em>) – the threshold to compare against.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the small faces with thier id,landmarks,bounding boxes.
+big_res (list of dictionary) : the big faces with thier id,landmarks,bounding boxes</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>small_res (list of dictionary)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="facecore.FaceCore.compare_face_size">
+<code class="sig-name descname">compare_face_size</code><span class="sig-paren">(</span><em class="sig-param">bbox</em>, <em class="sig-param">threshold</em><span class="sig-paren">)</span><a class="headerlink" href="#facecore.FaceCore.compare_face_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>compare the size of a face box against a threshold.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bbox</strong> (<em>numpy array</em>) – the bounding boxes of faces in the image which we went to compare.</p></li>
+<li><p><strong>threshold</strong> (<em>float</em>) – the theshold to compare agaist</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if the face is smaller or False if it is bigger</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool (bool)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="facecore.FaceCore.detect_faces">
+<code class="sig-name descname">detect_faces</code><span class="sig-paren">(</span><em class="sig-param">image</em>, <em class="sig-param">model=None</em>, <em class="sig-param">draw=True</em>, <em class="sig-param">clean=True</em>, <em class="sig-param">track_time=True</em><span class="sig-paren">)</span><a class="headerlink" href="#facecore.FaceCore.detect_faces" title="Permalink to this definition">¶</a></dt>
+<dd><p>detect the faces in an image.</p>
+<p>detect the faces bounding boxes and the face landmarks positions if the model supports that functionality</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image</strong> (<em>numpy array</em>) – the target image.</p></li>
+<li><p><strong>model</strong> (<em>string</em>) – the name of the model you wish to use .</p></li>
+<li><p><strong>draw</strong> (<em>bool</em>) – if you wich to draw results or not .</p></li>
+<li><p><strong>clean</strong> (<em>bool</em>) – if you wich to clear the models used in this process to save memory or keep it for faster response.</p></li>
+<li><p><strong>track_time</strong> (<em>bool</em>) – if you wish to track the processing time.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Return :</dt><dd><p>faces (numpy array) : the bounding boxes of the detected faces.
+points (numpy array) : the locations of the all faces landmarks may be None if the model doesn’t support face landmarks.
+detect_time (float) : the time it tooks to performe detection.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="facecore.FaceCore.draw">
+<code class="sig-name descname">draw</code><span class="sig-paren">(</span><em class="sig-param">img</em>, <em class="sig-param">bboxes</em>, <em class="sig-param">points=None</em>, <em class="sig-param">names=None</em><span class="sig-paren">)</span><a class="headerlink" href="#facecore.FaceCore.draw" title="Permalink to this definition">¶</a></dt>
+<dd><p>helper function to draw results when asked to</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>img</strong> (<em>numpy array</em>) – the image to draw on.</p></li>
+<li><p><strong>boxes</strong> (<em>numpy array</em>) – the bounding boxes.</p></li>
+<li><p><strong>points</strong> (<em>numpy array</em>) – the landmark points.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Return :</dt><dd><p>img (numpy array) : the image with bboxes and points drwan on.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="facecore.FaceCore.draw_on_frame">
+<code class="sig-name descname">draw_on_frame</code><span class="sig-paren">(</span><em class="sig-param">frame</em>, <em class="sig-param">res</em>, <em class="sig-param">frame_col=(0</em>, <em class="sig-param">0</em>, <em class="sig-param">0)</em>, <em class="sig-param">font=0</em>, <em class="sig-param">show=True</em><span class="sig-paren">)</span><a class="headerlink" href="#facecore.FaceCore.draw_on_frame" title="Permalink to this definition">¶</a></dt>
+<dd><p>draw pipline results on frame.</p>
+<dl class="simple">
+<dt>Args :</dt><dd><p>frame (numpy array) : the target image or frame to draw on.
+res (dictionary) : a dictionary that contains the result of pipline appiled on the frame.
+frame_col (tuple)  : (x,y,z) gives the rgb componants of the color to use in drawing.
+font (open cv font) : the writing font.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the frame with results drawn on it.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>frame (numpy array)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="facecore.FaceCore.extract_featuers">
+<code class="sig-name descname">extract_featuers</code><span class="sig-paren">(</span><em class="sig-param">img</em>, <em class="sig-param">model=None</em>, <em class="sig-param">track_time=False</em>, <em class="sig-param">clean=True</em><span class="sig-paren">)</span><a class="headerlink" href="#facecore.FaceCore.extract_featuers" title="Permalink to this definition">¶</a></dt>
+<dd><p>extract face embedding from image.</p>
+<p>use a model to extract the presentation embedding of a face which is used in recognition and verfication</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image</strong> (<em>numpy array</em>) – the target face image.</p></li>
+<li><p><strong>model</strong> (<em>string</em>) – the name of the model you wish to use .</p></li>
+<li><p><strong>clean</strong> (<em>bool</em>) – if you wich to clear the models used in this process to save memory or keep it for faster response.</p></li>
+<li><p><strong>track_time</strong> (<em>bool</em>) – if you wish to track the processing time.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the embeddings of the input image.
+emb_time (float) : the time it tooks to extract embeddings.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>emb (numpy array)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="facecore.FaceCore.filter_image">
+<code class="sig-name descname">filter_image</code><span class="sig-paren">(</span><em class="sig-param">image</em><span class="sig-paren">)</span><a class="headerlink" href="#facecore.FaceCore.filter_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>helper function that filters face image in order to help the embedding process using opencv filtering funcitons</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>image</strong> (<em>numpy array</em>) – the image array you want to apply the filter to</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Return :</dt><dd><p>image (numpy array) : the filtered image</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="facecore.FaceCore.get_old_new_id">
+<code class="sig-name descname">get_old_new_id</code><span class="sig-paren">(</span><em class="sig-param">prev_faces</em>, <em class="sig-param">big_res</em>, <em class="sig-param">keep_num=10</em><span class="sig-paren">)</span><a class="headerlink" href="#facecore.FaceCore.get_old_new_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>helper function to distinguish between new and old faces that appears in frame</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>prev_faces</strong> (<em>dictionary</em>) – contains the informations of previoulsy tracked faces in video</p></li>
+<li><p><strong>big_res</strong> (<em>dictionary</em>) – informations of the faces in current frame recognized big enough to be considered</p></li>
+<li><p><strong>keep_num</strong> (<em>int</em>) – indicates how many frames you want a face to be tracked along</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Return :</dt><dd><p>prev_faces (dictionary) : updated dictionary with faces that are tracked and currently big enough
+new_id (list) : list of the ids of the newly recognized faces (not tracked before)
+old_id (list) : list of the old ids that was tracked for the maximum count of frame counts
+active_id (list) : list of ids that still can be tracked</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="facecore.FaceCore.load_face">
+<code class="sig-name descname">load_face</code><span class="sig-paren">(</span><em class="sig-param">file_name</em>, <em class="sig-param">save_dir='.//data'</em><span class="sig-paren">)</span><a class="headerlink" href="#facecore.FaceCore.load_face" title="Permalink to this definition">¶</a></dt>
+<dd><p>load face object from pickle serilazation.</p>
+<dl class="simple">
+<dt>Args :</dt><dd><p>file_name (string) : the file to retrive.
+save_dir (string) : the file diractory.</p>
+</dd>
+<dt>Return :</dt><dd><p>face (person face) : the deserialized object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="facecore.FaceCore.load_models">
+<code class="sig-name descname">load_models</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#facecore.FaceCore.load_models" title="Permalink to this definition">¶</a></dt>
+<dd><p>load the models specified in the options.</p>
+<p>load th pipeline models which are set using set options if not set it will load the default models.</p>
+<p>Args:</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>True if all loading was successfully done.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="facecore.FaceCore.pipline_image">
+<code class="sig-name descname">pipline_image</code><span class="sig-paren">(</span><em class="sig-param">image</em>, <em class="sig-param">preprocess=False</em>, <em class="sig-param">clean=False</em>, <em class="sig-param">draw=False</em><span class="sig-paren">)</span><a class="headerlink" href="#facecore.FaceCore.pipline_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>perform the pipeline stages on an image.</p>
+<p>stages include : preprossing -&gt; detection -&gt; aligment -&gt; embedding .</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image</strong> (<em>numpy array</em>) – the image to process.</p></li>
+<li><p><strong>preprocess</strong> (<em>bool</em>) – wherther to preprocess of not.</p></li>
+<li><p><strong>clean</strong> (<em>bool</em>) – whether to clean the model when finish.</p></li>
+<li><p><strong>draw</strong> (<em>bool</em>) – whether to draw the detection and aligment results.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Return :</dt><dd><p>dictionary (dictionary) : the pipeline results which include the bounding boxes, points, embeddings , total time , image , success flag.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="facecore.FaceCore.preprocess_image">
+<code class="sig-name descname">preprocess_image</code><span class="sig-paren">(</span><em class="sig-param">image</em><span class="sig-paren">)</span><a class="headerlink" href="#facecore.FaceCore.preprocess_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>apply preprocessing options to image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>image</strong> (<em>numpy array</em>) – the target image.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Return :</dt><dd><p>image (numpy array) : the preprocessed image.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="facecore.FaceCore.print_on_frame">
+<code class="sig-name descname">print_on_frame</code><span class="sig-paren">(</span><em class="sig-param">frame</em>, <em class="sig-param">infos</em>, <em class="sig-param">frame_col=(0</em>, <em class="sig-param">0</em>, <em class="sig-param">0)</em>, <em class="sig-param">font=0</em>, <em class="sig-param">show=True</em><span class="sig-paren">)</span><a class="headerlink" href="#facecore.FaceCore.print_on_frame" title="Permalink to this definition">¶</a></dt>
+<dd><p>draw informations on target frame.</p>
+<dl class="simple">
+<dt>Args :</dt><dd><p>frame (numpy array) : the target image or frame to draw on.
+res (dictionary) : a dictionary that contains the result of pipline appiled on the frame.
+frame_col (tuple)  : (x,y,z) gives the rgb componants of the color to use in drawing.
+font (open cv font) : the writing font.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the frame with results drawn on it.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>frame (numpy array)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="facecore.FaceCore.process_labeled_data">
+<code class="sig-name descname">process_labeled_data</code><span class="sig-paren">(</span><em class="sig-param">data_dir='C:\\Users\\Ali\\Desktop\\FaceReco\\FaceApp\\facelib\\labeled_data\\'</em>, <em class="sig-param">out_dir='C:\\Users\\Ali\\Desktop\\FaceReco\\FaceApp\\facelib\\data\\'</em><span class="sig-paren">)</span><a class="headerlink" href="#facecore.FaceCore.process_labeled_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>process labeld data into serialized embeddings.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_dir</strong> (<em>string</em>) – the labled data diractory.</p></li>
+<li><p><strong>out_dir</strong> (<em>string</em>) – the diractory to serialize the data.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Return :</dt><dd><p>bool (bool) : True if all processing was successful.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="facecore.FaceCore.process_stream">
+<code class="sig-name descname">process_stream</code><span class="sig-paren">(</span><em class="sig-param">frame</em>, <em class="sig-param">show_frame=False</em>, <em class="sig-param">prev_faces=[]</em>, <em class="sig-param">keep_num=50</em>, <em class="sig-param">video_method='vote'</em><span class="sig-paren">)</span><a class="headerlink" href="#facecore.FaceCore.process_stream" title="Permalink to this definition">¶</a></dt>
+<dd><p>general function that applies all pipline face recongition stages and keep track of faces used with any kind of streams</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>frame</strong> (<em>numpy array</em>) – current frame to process</p></li>
+<li><p><strong>show_frame</strong> (<em>boolean</em>) – weather to show the processed frame or not, useful when using webcame</p></li>
+<li><p><strong>prev_faces</strong> (<em>dictionary</em>) – contains the informations of previoulsy tracked faces in video</p></li>
+<li><p><strong>keep_num</strong> (<em>int</em>) – indicates how many frames you want a face to be tracked along</p></li>
+<li><p><strong>video_method</strong> (<em>string</em>) – recognize method to use (example : knn)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Return :</dt><dd><p>frame (numpy array) : processed current frame with faces boxes, names , ids, facial points drawn on the frame diractly
+prev_faces (dictionary) : the updated tracked face informations</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="facecore.FaceCore.read_data">
+<code class="sig-name descname">read_data</code><span class="sig-paren">(</span><em class="sig-param">data_dir=''</em><span class="sig-paren">)</span><a class="headerlink" href="#facecore.FaceCore.read_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>read the serlized pickle type data in a diractory</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data_dir</strong> (<em>string</em>) – data diractory.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of person face objects which is the deserialized data in dir.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>faces (list of person face)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="facecore.FaceCore.recognize">
+<code class="sig-name descname">recognize</code><span class="sig-paren">(</span><em class="sig-param">emb</em>, <em class="sig-param">prev</em>, <em class="sig-param">video_method='vote'</em>, <em class="sig-param">model_name='kdtree'</em><span class="sig-paren">)</span><a class="headerlink" href="#facecore.FaceCore.recognize" title="Permalink to this definition">¶</a></dt>
+<dd><p>recognize the person name using the face embeddings provided</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>emb</strong> (<em>numpy array</em>) – the face embeddings of size 512</p></li>
+<li><p><strong>prev</strong> (<em>dictionary</em>) – dictionary that holds the previous information of this face which is used in video face recognition</p></li>
+<li><p><strong>video_method</strong> (<em>string</em>) – the method to use in time series face recognition (currently only vote and feature fusion are supported)</p></li>
+<li><p><strong>model_name</strong> (<em>string</em>) – the recognition model to use (knn kmeans kdtree softmax xgboost)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Return :</dt><dd><p>name (string) : the name of the person which the embeddings belong to
+dist (float) : the distance between the embeddings and the closest match
+ttime (float) : the total time of the recognition process.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="facecore.FaceCore.save_face">
+<code class="sig-name descname">save_face</code><span class="sig-paren">(</span><em class="sig-param">face</em>, <em class="sig-param">file_name</em>, <em class="sig-param">save_dir='.//data'</em><span class="sig-paren">)</span><a class="headerlink" href="#facecore.FaceCore.save_face" title="Permalink to this definition">¶</a></dt>
+<dd><p>save a person face object as pickle object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>face</strong> (<em>person face</em>) – person face object to serilzie.</p></li>
+<li><p><strong>file_name</strong> (<em>string</em>) – the pickle file name in which to save the object.</p></li>
+<li><p><strong>save_dir</strong> (<em>string</em>) – save diractory.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Return :</dt><dd><p>bool (bool) : True if saved successfully.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="facecore.FaceCore.set_model_options">
+<code class="sig-name descname">set_model_options</code><span class="sig-paren">(</span><em class="sig-param">model</em>, <em class="sig-param">options</em><span class="sig-paren">)</span><a class="headerlink" href="#facecore.FaceCore.set_model_options" title="Permalink to this definition">¶</a></dt>
+<dd><p>set the configuration of a model.</p>
+<p>if the model object is not create this function will create one and sotre it in the coressponding dictionary attribute
+note that the users should know what configuration each model accept and this fucntion uses configure function found
+in each model class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model</strong> (<em>string</em>) – the name of the module you wich to configure</p></li>
+<li><p><strong>options</strong> (<em>dictionary</em>) – the options which the module accepts</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if all configuration was successfully done.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="facecore.FaceCore.set_pipline_option">
+<code class="sig-name descname">set_pipline_option</code><span class="sig-paren">(</span><em class="sig-param">model_options</em>, <em class="sig-param">rescale_options='auto'</em><span class="sig-paren">)</span><a class="headerlink" href="#facecore.FaceCore.set_pipline_option" title="Permalink to this definition">¶</a></dt>
+<dd><p>set the models to use when performing pipline combined operations.</p>
+<p>set the models which the library should load and use when preforming one or more of the pipline options.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_options</strong> (<em>dictionary</em>) – contains the names of detect,align,embedding models.</p></li>
+<li><p><strong>rescale_options</strong> (<em>string/array</em>) – if set to auto this will let the library decide how to process input image or
+provide the width and hieght to rescale the image.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if all configuration was successfully done.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="facecore.FaceCore.to_xyhw">
+<code class="sig-name descname">to_xyhw</code><span class="sig-paren">(</span><em class="sig-param">bbox</em><span class="sig-paren">)</span><a class="headerlink" href="#facecore.FaceCore.to_xyhw" title="Permalink to this definition">¶</a></dt>
+<dd><p>covert box to differnet box representation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>bbox</strong> (<em>numpy array</em>) – the bounding boxes to change.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the bounding boxes with different representation.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bbox (numpy array)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="facecore.FaceCore.track">
+<code class="sig-name descname">track</code><span class="sig-paren">(</span><em class="sig-param">bbox</em>, <em class="sig-param">model=None</em><span class="sig-paren">)</span><a class="headerlink" href="#facecore.FaceCore.track" title="Permalink to this definition">¶</a></dt>
+<dd><p>tracks target throw a series of images.</p>
+<p>tracks the face throw images in ortder to avoid the need to preform all the pipline each time.</p>
+<dl class="simple">
+<dt>Agrs:</dt><dd><p>bbox (numpy array) : the bounding boxes of faces in the image which we went to track.
+model (string) : the model name you wish to use for tracking.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the bounding boxes with tracking id.
+track_time (float) : the time it tooks to track.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>ret (numpy array)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Ali Mohammad
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
