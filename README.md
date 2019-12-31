@@ -37,8 +37,8 @@ coming soon
 
 The faceapp.ui contains a  UI generated using PyQt designer (it can be comipled to different platforms) the faceapp.py the python compiled version. You can run the faceapp.py and try image, video and webcam face recognition, you can also add faces to your database. 
 ## acknowledgment
-https://github.com/ipazc/mtcnn
-https://github.com/davidsandberg/facenet
-https://github.com/abewley/sort
-https://github.com/deepinsight/insightface
+1. https://github.com/ipazc/mtcnn
+2. https://github.com/davidsandberg/facenet
+3. https://github.com/abewley/sort
+4. https://github.com/deepinsight/insightface
 
