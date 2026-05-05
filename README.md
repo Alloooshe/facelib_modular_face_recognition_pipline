@@ -1,48 +1,97 @@
 # facelib_modular_face_recognition_pipline
-> Legacy notice (v1.0.0): This repository is archived as the original 1.x codebase and is no longer actively maintained.
-> 
-> Maintenance status: unsupported. Bug fixes, security updates, and dependency upgrades are not planned for this version.
->
-> A modernized v2 rewrite with updated dependencies and architecture is planned. Please use this repo for reference or historical purposes only.
 
-simple and modular framework to perform all stages of face recognition pipeline (detection, alignment, embedding, matching) with the possibility to add and use different models and techniques for each stage.
+[![GitHub stars](https://img.shields.io/github/stars/Alloooshe/facelib_modular_face_recognition_pipline?style=social)](https://github.com/Alloooshe/facelib_modular_face_recognition_pipline/stargazers)
+[![Docs](https://img.shields.io/badge/docs-github%20pages-blue)](https://alloooshe.github.io/facelib_modular_face_recognition_pipline/)
 
-## content
-* what is facelib
-* architecture
-* video recognition
-* usage
-* acknowledgment
+Star count: **9** (checked on 2026-05-05 via GitHub API).
 
+> Legacy notice (v1.0.0): the original v1 codebase is archived and unsupported.
+> No planned bug fixes, security updates, or dependency upgrades for v1.
 
+This repository now contains:
+- `v1` legacy implementation (historical reference)
+- `v2` modern Python package scaffold under `src/facelib_v2`
 
-![friends]( https://github.com/Alloooshe/facelib_modular_face_recognition_pipline/blob/master/images/out.jpg)
+Documentation site: [GitHub Pages docs](https://alloooshe.github.io/facelib_modular_face_recognition_pipline/)
 
-## what is facelib ?
-the project solves the problem of face recognition by solving each of the following problems individually: face detection, face alignment, face embedding and face matching or recognition, the code reflects the academic partition so that each step can be carried out independently with whatever framework or programming language the user prefers and then it will be integrated in the pipeline. the project also works with video or live stream and implement object tracking to get better results and to reduce the computation cost when dealing with high frame rate.
-the project aims to find a software solution that allows developers to quickly customize a face recognition pipeline depending on their needs, also the project help researchers evaluate their models developed for a specific task (such as face embedding) with different detection and alignment methods. there are many other useful use cases for the project. 
-the code is organized and documented in a good way so that developers can read and make adjustments relatively easy, the docs is built using sphinx so the user can search for any needed documentation. 
-## architecture
-![facelib architecture]( https://github.com/Alloooshe/facelib_modular_face_recognition_pipline/blob/master/images/architecture.PNG)
+## v2 goals
 
-The code architecture consists of independent units that perform independent tasks, the main block is the class FaceCore which handles the pipeline operation but can be used for single tasks such as detection or embedding. 
-Each class has the option to “clean” the model it leaded, the FaceCore is built to keep the models in memory in order to avoid loading overhead. This boost the performance of facelib in applications. In any time, you can use the clean option to free memory up. 
+- Modern architecture with pluggable stages (detector, aligner, embedder, matcher)
+- Clean package layout suitable for PyPI
+- Type hints and testability first
 
+## Quick start (v2, local)
 
-## video recognition
-The FaceCore class can perform video face recognition and tracking using the function “process stream” (which can handle both live stream and video) , this includes ignoring small faces that appears in a video and once a face is bigger than a threshold it then performs recognition pipeline on that face for N (a variable that you can control) frames and it accumulate the decision made about the identity of the face and makes a final decision, once a final decision is made no more recognition is performed and the function continue to only track the face.  
-the decision accumulation can be made in two ways (found to have similar performance) which are voting and feature fusion, in voting each of the first N frames has one vote on the final decision while in feature fusion we take the mean of the N embedding vectors extracted in the N frames for a certain face and then make a final matching using the new embedding vector.
-This is important to reduce the computation cost and to make better face recognition. 
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -U pip
+pip install -e ".[dev]"
+pytest
+python examples/v2_quickstart.py
+```
 
+## Usage (v2 API)
 
- ## usage
-coming soon
+```python
+import numpy as np
+from facelib_v2 import FacePipeline
 
-## demo
-[face recognition video]( https://www.youtube.com/watch?v=kSNk_1QLzbQ)
+class DummyDetector:
+    def detect(self, image: np.ndarray) -> list[dict]:
+        return [{"bbox": [10, 10, 100, 100], "score": 0.99}]
 
-The faceapp.ui contains a  UI generated using PyQt designer (it can be comipled to different platforms) the faceapp.py the python compiled version. You can run the faceapp.py and try image, video and webcam face recognition, you can also add faces to your database. 
-## acknowledgment
+class DummyAligner:
+    def align(self, image: np.ndarray, detections: list[dict]) -> list[np.ndarray]:
+        return [np.zeros((112, 112, 3), dtype=np.uint8) for _ in detections]
+
+class DummyEmbedder:
+    def embed(self, aligned_faces: list[np.ndarray]) -> np.ndarray:
+        return np.ones((len(aligned_faces), 512), dtype=np.float32)
+
+class DummyMatcher:
+    def match(self, embeddings: np.ndarray) -> list[dict]:
+        return [{"identity": "person_a", "confidence": 0.88} for _ in range(len(embeddings))]
+
+image = np.zeros((480, 640, 3), dtype=np.uint8)
+pipeline = FacePipeline(DummyDetector(), DummyAligner(), DummyEmbedder(), DummyMatcher())
+result = pipeline.process_image(image)
+print(result["matches"])
+```
+
+Full docs:
+- Usage guide: <https://alloooshe.github.io/facelib_modular_face_recognition_pipline/usage/>
+- API reference: <https://alloooshe.github.io/facelib_modular_face_recognition_pipline/api/>
+
+## PyPI packaging and release
+
+`pyproject.toml` is already configured for package builds.
+
+```bash
+pip install -U build twine
+python -m build
+twine check dist/*
+twine upload dist/*
+```
+
+If package name `facelib-v2` is already taken on PyPI, change `project.name` in `pyproject.toml` before upload.
+
+## v1 historical notes
+
+The legacy project solved face recognition as independent stages:
+- detection
+- alignment
+- embedding
+- matching
+
+It also supported video/live stream processing with tracking and decision accumulation.
+
+## Demo (legacy v1)
+
+[face recognition video](https://www.youtube.com/watch?v=kSNk_1QLzbQ)
+
+## Acknowledgment
+
 1. [MTCNN](https://github.com/ipazc/mtcnn)
 2. [facenet](https://github.com/davidsandberg/facenet)
 3. [SORT](https://github.com/abewley/sort)

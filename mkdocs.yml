@@ -1,0 +1,13 @@
+site_name: facelib v2 docs
+site_description: Modular face recognition pipeline documentation.
+site_url: https://alloooshe.github.io/facelib_modular_face_recognition_pipline/
+repo_url: https://github.com/Alloooshe/facelib_modular_face_recognition_pipline
+repo_name: Alloooshe/facelib_modular_face_recognition_pipline
+
+theme:
+  name: material
+
+nav:
+  - Home: docs-v2/index.md
+  - Usage: docs-v2/usage.md
+  - API: docs-v2/api.md

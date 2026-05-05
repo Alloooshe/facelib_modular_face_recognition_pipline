@@ -1,0 +1,60 @@
+[build-system]
+requires = ["hatchling>=1.24.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "facelibpip"
+version = "2.0.0a0"
+description = "Modular face recognition pipeline with pluggable detector/aligner/embedder/matcher stages."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+  { name = "Ali Mohammad" }
+]
+keywords = [
+  "face-recognition",
+  "computer-vision",
+  "pipeline",
+  "modular",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+  "numpy>=1.24",
+  "pydantic>=2.7",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.2",
+  "ruff>=0.5.0",
+  "mypy>=1.10",
+]
+
+[project.urls]
+Homepage = "https://github.com/Alloooshe/facelib_modular_face_recognition_pipline"
+Repository = "https://github.com/Alloooshe/facelib_modular_face_recognition_pipline"
+Issues = "https://github.com/Alloooshe/facelib_modular_face_recognition_pipline/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/facelib_v2"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
