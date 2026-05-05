@@ -1,4 +1,10 @@
 # facelib_modular_face_recognition_pipline
+> Legacy notice (v1.0.0): This repository is archived as the original 1.x codebase and is no longer actively maintained.
+> 
+> Maintenance status: unsupported. Bug fixes, security updates, and dependency upgrades are not planned for this version.
+>
+> A modernized v2 rewrite with updated dependencies and architecture is planned. Please use this repo for reference or historical purposes only.
+
 simple and modular framework to perform all stages of face recognition pipeline (detection, alignment, embedding, matching) with the possibility to add and use different models and techniques for each stage.
 
 ## content
