@@ -3,7 +3,7 @@ requires = ["hatchling>=1.24.0"]
 build-backend = "hatchling.build"
 
 [project]
-name = "facelib-v2"
+name = "facelibpip"
 version = "2.0.0a0"
 description = "Modular face recognition pipeline with pluggable detector/aligner/embedder/matcher stages."
 readme = "README.md"
