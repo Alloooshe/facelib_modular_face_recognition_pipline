@@ -1,6 +1,7 @@
 # facelib_modular_face_recognition_pipline
 
 [![GitHub stars](https://img.shields.io/github/stars/Alloooshe/facelib_modular_face_recognition_pipline?style=social)](https://github.com/Alloooshe/facelib_modular_face_recognition_pipline/stargazers)
+[![Docs](https://img.shields.io/badge/docs-github%20pages-blue)](https://alloooshe.github.io/facelib_modular_face_recognition_pipline/)
 
 Star count: **9** (checked on 2026-05-05 via GitHub API).
 
@@ -10,6 +11,8 @@ Star count: **9** (checked on 2026-05-05 via GitHub API).
 This repository now contains:
 - `v1` legacy implementation (historical reference)
 - `v2` modern Python package scaffold under `src/facelib_v2`
+
+Documentation site: [GitHub Pages docs](https://alloooshe.github.io/facelib_modular_face_recognition_pipline/)
 
 ## v2 goals
 
@@ -55,6 +58,10 @@ pipeline = FacePipeline(DummyDetector(), DummyAligner(), DummyEmbedder(), DummyM
 result = pipeline.process_image(image)
 print(result["matches"])
 ```
+
+Full docs:
+- Usage guide: <https://alloooshe.github.io/facelib_modular_face_recognition_pipline/usage/>
+- API reference: <https://alloooshe.github.io/facelib_modular_face_recognition_pipline/api/>
 
 ## PyPI packaging and release
 
